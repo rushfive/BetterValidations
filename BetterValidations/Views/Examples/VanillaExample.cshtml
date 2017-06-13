@@ -1,0 +1,47 @@
+@section scripts {
+	<script src="~/scripts/libraries/axios.js"></script>
+	<script src="~/scripts/vanilla-example.js"></script>
+}
+
+<div class="vanilla-example-container">
+	<h2>Register</h2>
+	<h3>Create a new account using the fields below.</h3>
+
+	<div class="bv-form-group">
+		<label>Username<span>*</span></label>
+		<div class="bv-input-container">
+			<input class="form-control bv-username" type="text" />
+			<span class="bv-error-text"></span>
+		</div>
+	</div>
+
+	<div class="bv-form-group">
+		<label>Email<span>*</span></label>
+		<div class="bv-input-container">
+			<input class="form-control bv-email" type="text" />
+			<span class="bv-error-text"></span>
+		</div>
+	</div>
+
+	<div class="bv-form-group">
+		<label>Password<span>*</span></label>
+		<div class="bv-input-container">
+			<input class="form-control bv-password" type="password" />
+			<span class="bv-error-text"></span>
+		</div>
+	</div>
+
+	<div class="bv-form-group">
+		<label>Confirm Password<span>*</span></label>
+		<div class="bv-input-container">
+			<input class="form-control bv-password-confirm" type="password" />
+			<span class="bv-error-text"></span>
+		</div>
+	</div>
+
+	<div class="bv-form-group">
+		<div class="col-md-12 bv-input-container">
+			<button type="submit" class="btn btn-default bv-register-btn">Register</button>
+		</div>
+	</div>
+</div>

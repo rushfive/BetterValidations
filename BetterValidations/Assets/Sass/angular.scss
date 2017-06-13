@@ -1,0 +1,16 @@
+.angular-example-controller {
+	margin-top: 30px;
+
+	.bv-form-group {
+		.error-text {
+			display: block;
+			color: red;
+		}
+
+		&.error {
+			input {
+				border: 1px solid red;
+			}
+		}
+	}
+}

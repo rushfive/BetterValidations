@@ -1,0 +1,39 @@
+.container.body-content {
+	margin-top: 50px;
+}
+
+.bv-form-group {
+	margin-bottom: 20px;
+
+	label {
+		margin-bottom: 5px;
+		color: #616161;
+		padding-left: 0;
+	}
+
+	.bv-input-container {
+		padding-left: 0;
+
+		input.form-control {
+			max-width: 400px;
+		}
+
+		.bv-error-text {
+			color: red;
+			margin-top: 3px;
+		}
+	}
+}
+
+h2 {
+	color: #616161;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	font-size: 25px;
+}
+
+h3 {
+	color: #616161;
+	font-size: 15px;
+	margin-top: 5px;
+}
