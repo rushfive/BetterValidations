@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\js\**" />
+    <Content Remove="wwwroot\js\**" />
+    <EmbeddedResource Remove="wwwroot\js\**" />
+    <None Remove="wwwroot\js\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="gulpfile.babel.js" />
     <Content Include="wwwroot\images\gulpfile.babel.js" />
   </ItemGroup>
@@ -26,9 +33,6 @@
   <ItemGroup>
     <Folder Include="Assets\" />
     <Folder Include="Views\Examples\" />
-    <Folder Include="wwwroot\js\Angular\" />
-    <Folder Include="wwwroot\js\React\" />
-    <Folder Include="wwwroot\js\Vanilla\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServerComponents\ServerComponents.csproj" />

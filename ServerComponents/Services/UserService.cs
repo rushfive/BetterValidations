@@ -17,6 +17,11 @@ namespace ServerComponents.Services
 
 		public async Task<Guid> AddAsync(UserAdd user)
 		{
+			if (user == null)
+			{
+				throw new ArgumentException("User must be specified.", nameof(user));
+			}
+
 			await this.validator.ValidateAddAsync(user);
 
 			// at this point, user is valid to add.

@@ -11,22 +11,22 @@
 	formService.setInputUpdateListener(password);
 	formService.setInputUpdateListener(confirm);
 
-	register.addEventListener('click', () => {
-		const errorHandler = (error) => {
-			if (!!error.UserName) {
-				formService.displayHttpError(username, error.UserName);
-			}
-			if (!!error.Email) {
-				formService.displayHttpError(email, error.Email);
-			}
-			if (!!error.Password) {
-				formService.displayHttpError(password, error.Password);
-			}
-			if (!!error.ConfirmPassword) {
-				formService.displayHttpError(confirm, error.ConfirmPassword);
-			}
-		};
+	const errorHandler = (error) => {
+		if (!!error.UserName) {
+			formService.displayHttpError(username, error.UserName);
+		}
+		if (!!error.Email) {
+			formService.displayHttpError(email, error.Email);
+		}
+		if (!!error.Password) {
+			formService.displayHttpError(password, error.Password);
+		}
+		if (!!error.ConfirmPassword) {
+			formService.displayHttpError(confirm, error.ConfirmPassword);
+		}
+	};
 
+	register.addEventListener('click', () => {
 		const registerModel = {
 			UserName: username.value,
 			Email: email.value,
@@ -42,4 +42,4 @@
 			.catch(errorHandler);
 	});
 
-})(QP.FormService, QP.HttpService);
+})(BV.FormService, BV.HttpService);

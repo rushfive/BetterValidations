@@ -34,6 +34,23 @@ namespace ServerComponents.Validators
 				validationErrors.Add("Email", "This email already exists.");
 			}
 
+			bool passwordExists = !string.IsNullOrWhiteSpace(user.Password),
+				confirmPasswordExists = !string.IsNullOrWhiteSpace(user.ConfirmPassword);
+			if (!passwordExists)
+			{
+				validationErrors.Add("Password", "This field is required.");
+			}
+			if (!confirmPasswordExists)
+			{
+				validationErrors.Add("ConfirmPassword", "This field is required.");
+			}
+
+			if (passwordExists && confirmPasswordExists
+				&& !string.Equals(user.Password, user.ConfirmPassword, StringComparison.OrdinalIgnoreCase))
+			{
+				validationErrors.Add("ConfirmPassword", "Doesn't match with password.");
+			}
+
 			validationErrors.ThrowIfErrors();
 		}
 

@@ -1,6 +1,6 @@
-const QP = {};
+const BV = {};
 
-QP.FormService = (() => {
+BV.FormService = (() => {
 	return {
 		setInputUpdateListener: (inputElement, callback) => {
 			inputElement.addEventListener('input', event => {
@@ -23,7 +23,7 @@ QP.FormService = (() => {
 	}
 })();
 
-QP.HttpService = ((x) => {
+BV.HttpService = ((x) => {
 	// add axios response interceptor
 	x.interceptors.response.use(
 		response => response,
@@ -44,7 +44,7 @@ QP.HttpService = ((x) => {
 		});
 
 	return {
-		register: (registerModel, returnUrl) => {
+		register: (registerModel) => {
 			return x.post('/api/User/Register', registerModel);
 		}
 	}

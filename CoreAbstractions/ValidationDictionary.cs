@@ -7,10 +7,6 @@ namespace CoreAbstractions
 	{
 		private Dictionary<string, List<string>> internalDictionary { get; } = new Dictionary<string, List<string>>();
 
-		public ValidationDictionary()
-		{
-		}
-
 		public void Add(string key, string value)
 		{
 			if (!this.internalDictionary.ContainsKey(key))
